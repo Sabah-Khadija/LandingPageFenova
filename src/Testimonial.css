@@ -1,0 +1,161 @@
+.testimonial-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 170vh; 
+  z-index: 30; 
+}
+
+.testimonial-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Styles pour la première page */
+#testimonial-page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+
+#testimonial-center {
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000003c;
+  padding-bottom: 2.5vw;
+  position: relative;
+  z-index: 20;
+}
+
+#testimonial-left h3 {
+  width: 25vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+  color: #000000;
+  position: relative;
+  z-index: 25;
+}
+
+#testimonial-center h1 {
+  font-size: 10vw;
+  text-align: right;
+  line-height: 8vw;
+  color: #000000;
+  position: relative;
+  z-index: 25;
+}
+
+#testimonial-page1 video {
+  position: relative;
+  border-radius: 30px;
+  margin-top: 4vw;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+
+/* Styles pour la deuxième page */
+#testimonial-page2 {
+  min-height: 90vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 8vw 0;
+  position: relative;
+  z-index: 15;
+}
+
+#testimonial-moving-text {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#testimonial-moving-text::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-con {
+  white-space: nowrap;
+  display: inline-block;
+  animation: testimonial-move 15s linear infinite;
+}
+
+#testimonial-moving-text h1 {
+  font-size: 9vw;
+  display: inline-block;
+  color: #000000;
+}
+
+.testimonial-gola {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 60px solid #d6080b;
+  display: inline-block;
+  rotate: 180deg;
+  margin: 1vw 2vw;
+  
+}
+
+@keyframes testimonial-move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .testimonial-wrapper {
+    margin-top: 300vh; 
+  }
+  
+  #testimonial-page1 {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 0 0vw;
+  }
+
+  #testimonial-center {
+    height: 62vh;
+    padding: 7vw 5vw;
+    padding-bottom: 10vw;
+    flex-direction: column-reverse;
+  }
+
+  #testimonial-left h3 {
+    width: 80%;
+    font-size: 5.5vw;
+    line-height: 6vw;
+  }
+
+  #testimonial-center h1 {
+    font-size: 17vw;
+    line-height: 15vw;
+  }
+
+  #testimonial-page1 video {
+    border-radius: 15px;
+    height: 70vh;
+    width: 92%;
+    margin-left: 4%;
+  }
+
+  #testimonial-moving-text h1 {
+    font-size: 15vw;
+  }
+
+  .testimonial-gola {
+    height: 25px;
+    width: 25px;
+    margin: 2vw 2vw;
+  }
+}
